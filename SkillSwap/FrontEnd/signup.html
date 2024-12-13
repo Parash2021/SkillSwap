@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - SkillSwap</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+        }
+        .left-panel {
+            background-color: #252525;
+            color: #fff;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+        .left-panel h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .left-panel p {
+            font-size: 1.2rem;
+            text-align: center;
+            max-width: 300px;
+            line-height: 1.5;
+        }
+        .right-panel {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            background-color: #eef2f7;
+        }
+        .form-container {
+            width: 100%;
+            max-width: 400px;
+        }
+        .form-container h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #333;
+        }
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+        .input-group label {
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .social-signup {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 1.5rem;
+        }
+        .social-signup button {
+            flex: 1;
+            padding: 0.8rem;
+            border: none;
+            color: #fff;
+            font-size: 0.9rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .google-btn {
+            background-color: #dd4b39;
+        }
+        .facebook-btn {
+            background-color: #3b5998;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 1rem;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="left-panel">
+        <h1>Join SkillSwap</h1>
+        <p>Discover new skills and connect with a network of passionate learners. Start your journey with us today!</p>
+    </div>
+    <div class="right-panel">
+        <div class="form-container">
+            <h2>Create an Account</h2>
+            <div class="social-signup">
+                <button class="google-btn">Sign up with Google</button>
+                <button class="facebook-btn">Sign up with Facebook</button>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Create a password">
+            </div>
+            <button class="submit-btn">Sign Up</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

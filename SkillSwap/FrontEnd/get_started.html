@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - SkillSwap</title>
+    <style>
+        /* Basic styling and font */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background: linear-gradient(135deg, #1a1a1a, #333333);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-y: hidden; /* Prevent scrolling on the entire body */
+        }
+
+        .container {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 0; /* Add margin to allow some space when scrolling */
+            background: #f5f5f5;
+        }
+
+        /* Left panel styling */
+        .left-panel {
+            background: linear-gradient(135deg, #333, #1a1a1a);
+            color: #fff;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            position: fixed; /* Keep the left panel fixed */
+            height: 100%; /* Full height of the viewport */
+            top: 0;
+            left: 0;
+        }
+        .left-panel h1 {
+            font-size: 3.5rem;
+            color: #00d4ff;
+            margin-bottom: 1rem;
+            text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .left-panel p {
+            font-size: 1.2rem;
+            max-width: 300px;
+            line-height: 1.5;
+        }
+
+        /* Right panel styling */
+        .right-panel {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 2rem;
+            overflow-y: auto; /* Allow only the right panel to scroll */
+            height: 100vh; /* Full height of the viewport */
+            padding-top: 3rem; /* Allow space for the content on top */
+            margin-left: 50%; /* Offset right panel to the right */
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 400px;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        /* Input and label styling */
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+        .input-group label {
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+        .input-group input, .input-group select, .input-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .input-group input:focus, .input-group select:focus, .input-group textarea:focus {
+            border-color: #00d4ff;
+            box-shadow: 0 0 5px rgba(0, 212, 255, 0.5);
+        }
+
+        /* Submit button styling */
+        .submit-btn {
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            background: linear-gradient(135deg, #333, #1a1a1a);
+            color: #00d4ff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .submit-btn:hover {
+            background: #00d4ff;
+            color: white;
+            box-shadow: 0 6px 20px rgba(0, 212, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="left-panel">
+        <h1>Join SkillSwap</h1>
+        <p>Create an account to start swapping skills and collaborating with others.</p>
+    </div>
+    <div class="right-panel">
+        <div class="form-container">
+            <h2>Create Your Account</h2>
+            <form action="user_profile.html" method="POST">
+                <div class="input-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full_name" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Choose a username" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="profession">Profession</label>
+                    <select id="profession" name="profession" required>
+                        <option value="" disabled selected>Select your profession level</option>
+                        <option value="Professional">Professional</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Student">Student</option>
+                        <option value="Freelancer">Freelancer</option>
+                        <option value="Hobbyist">Hobbyist</option>
+                        <option value="Beginner">Beginner</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="about">About You</label>
+                    <textarea id="about" name="about" rows="3" placeholder="Tell us a bit about yourself" required></textarea>
+                </div>
+                
+                <div class="input-group">
+                    <label for="skills">Skills</label>
+                    <input type="text" id="skills" name="skills" placeholder="List your skills (e.g., Python, Machine Learning)" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="experience">Experience</label>
+                    <textarea id="experience" name="experience" rows="3" placeholder="Describe your work experience" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Create Profile</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

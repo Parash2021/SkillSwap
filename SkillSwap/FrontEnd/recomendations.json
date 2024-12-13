@@ -1,0 +1,7 @@
+{
+    "_id": ObjectId("uniqueRecommendationId789"),
+    "user_id": ObjectId("uniqueUserId123"),
+    "recommended_skills": ["Machine Learning", "Data Visualization"],
+    "generated_at": ISODate("2024-11-14T10:05:00Z")
+  }
+  

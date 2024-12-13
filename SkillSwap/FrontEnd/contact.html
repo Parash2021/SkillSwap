@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - SkillSwap</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Additional styling for Contact Us page */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #121212;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    h1 {
+      color: #00d4ff;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      font-size: 1rem;
+      margin: 10px 0;
+    }
+
+    .submit-button {
+      background-color: #00d4ff;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 1rem;
+      margin-top: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .submit-button:hover {
+      background-color: #0097cc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Contact Us</h1>
+    <form class="contact-form" onsubmit="redirectToThankYou(event)">
+      <input type="text" id="name" class="input-field" placeholder="Your Name" required>
+      <input type="email" id="email" class="input-field" placeholder="Your Email" required>
+      <textarea id="message" class="input-field" placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit" class="submit-button">Send Message</button>
+    </form>
+  </div>
+
+  <script>
+    // JavaScript function to handle form submission and redirect
+    function redirectToThankYou(event) {
+      event.preventDefault(); // Prevent form from submitting normally
+      alert("Thank you for your message! We’ll get back to you soon.");
+      window.location.href = "thankyou.html"; // Redirect to Thank You page
+    }
+  </script>
+</body>
+</html>

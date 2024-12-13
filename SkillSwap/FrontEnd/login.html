@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SkillSwap</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+        }
+        .left-panel {
+            background-color: #1a1a1a;
+            color: #fff;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+        .left-panel h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .left-panel p {
+            font-size: 1.2rem;
+            text-align: center;
+            max-width: 300px;
+            line-height: 1.5;
+        }
+        .right-panel {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            background-color: #f5f5f5;
+        }
+        .form-container {
+            width: 100%;
+            max-width: 400px;
+        }
+        .form-container h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #333;
+        }
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+        .input-group label {
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .social-login {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 1.5rem;
+        }
+        .social-login button {
+            flex: 1;
+            padding: 0.8rem;
+            border: none;
+            color: #fff;
+            font-size: 0.9rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .google-btn {
+            background-color: #ff0000;
+        }
+        .facebook-btn {
+            background-color: #3b5998;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 1rem;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        } 
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="left-panel">
+        <h1>Welcome Back</h1>
+        <p>Access your SkillSwap account to continue swapping skills and collaborating.</p>
+    </div>
+    <div class="right-panel">
+        <div class="form-container">
+            <h2>Login to Your Account</h2>
+            <div class="social-login">
+                <button class="google-btn">Sign in with Google</button>
+                <button class="facebook-btn">Sign in with Facebook</button>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
+            <button class="submit-btn" onclick="login()">Login</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function login() {
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        // Placeholder for login logic
+        if (email && password) {
+            // Simulate a successful login 
+            console.log("Logging in with", email, password);
+            
+            // Redirect to the homepage after login
+            window.location.href = "index.html"; // Redirect to homepage
+        } else {
+            alert("Please enter valid credentials.");
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Skills - SkillSwap</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Additional styling specific to the Find Skills page */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #121212;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    h1 {
+      color: #00d4ff;
+    }
+
+    .search-bar {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      font-size: 1rem;
+      margin-top: 20px;
+    }
+
+    .search-button {
+      background-color: #00d4ff;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1rem;
+      margin-top: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .search-button:hover {
+      background-color: #0097cc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Find Skills</h1>
+    <form class="search-form" onsubmit="redirectToThankYou(event)">
+      <input type="text" id="search-input" class="search-bar" placeholder="Search for a skill..." required>
+      <button type="submit" class="search-button">Search</button>
+    </form>
+  </div>
+
+  <script>
+    // JavaScript function to handle form submission and redirect
+    function redirectToThankYou(event) {
+      event.preventDefault(); // Prevent form from submitting normally
+      const searchQuery = document.getElementById('search-input').value;
+      alert(`Searching for ${searchQuery}`);
+      window.location.href = "thankyou.html"; // Redirect to Thank You page
+    }
+  </script>
+</body>
+</html>

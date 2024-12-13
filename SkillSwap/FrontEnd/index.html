@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillSwap Homepage</title>
+  <style>
+    body {
+      background-image: url('C:/Users/paras/OneDrive/Documents/Project-7th Sem/SkillSwap/images/background.avif'); 
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      color: white;
+      margin: 0;
+    }
+
+    /* Navbar styling */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: rgba(0, 0, 0, 0.7); 
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      color: #00d4ff; 
+    }
+
+    .login-button {
+      background-color: #00d4ff;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      position: absolute;
+      right: 50px; 
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+    }
+
+    .login-button:hover {
+      background-color: #0097cc;
+    }
+
+    /* Hero Section Styling */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.6); 
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin: 0;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin: 10px 0 20px;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero .button {
+      background-color: rgba(0, 212, 255, 0.8);
+      border: none;
+      padding: 12px 25px;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .hero .button:hover {
+      background-color: rgba(0, 151, 204, 0.9);
+    }
+
+    /* Features section */
+    .features {
+      display: flex;
+      justify-content: space-around;
+      padding: 40px 0;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+    }
+
+    .feature-box {
+      max-width: 300px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature-box h3 {
+      margin: 0 0 10px;
+      font-size: 1.5rem;
+      color: #00d4ff;
+    }
+
+    .feature-box p {
+      font-size: 1rem;
+      color: #d4d4d4;
+    }
+
+    /* Chatbot Styling */
+    #chatbot {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    #chatbot-toggle {
+      font-size: 24px;
+      background-color: #00d4ff;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+    }
+
+    #chatbot-container {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      width: 300px;
+      height: 400px;
+      background-color: #121212;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #chatbot-header {
+      padding: 15px;
+      background-color: #0097cc;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    #chatbot-messages {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      color: white;
+    }
+
+    #chatbot-input {
+      width: calc(100% - 50px);
+      padding: 10px;
+      border: none;
+      border-top: 1px solid #333;
+      background: #222;
+      color: white;
+    }
+
+    #send-message {
+      width: 50px;
+      background-color: #00d4ff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="find_skills.html">Find Skills</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <a href="login.html" class="login-button" id="loginButton">Log In</a>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>SkillSwap</h1>
+    <p>Where Skills Meet Opportunity</p>
+    <a href="get_started.html" class="button">Get Started →</a>
+  </div>
+
+  <!-- Features Section -->
+  <div class="features">
+    <div class="feature-box">
+      <h3>Connect with Experts</h3>
+      <p>Find and connect with experts in various fields to enhance your skillset.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Personalized Recommendations</h3>
+      <p>Get tailored suggestions to improve your skills based on your goals.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Skill Matching</h3>
+      <p>Our advanced algorithm helps you find the best skill matches effortlessly.</p>
+    </div>
+  </div>
+
+  <!-- Chatbot Interface -->
+  <div id="chatbot">
+    <button id="chatbot-toggle">💬</button>
+    <div id="chatbot-container">
+      <div id="chatbot-header">Chat with SkillSwap Assistant</div>
+      <div id="chatbot-messages"></div>
+      <input type="text" id="chatbot-input" placeholder="Type your message...">
+      <button id="send-message">Send</button>
+    </div>
+  </div>
+
+  <!-- JavaScript Files -->
+  <script src="script.js" defer></script>
+  <script src="frontend.js" defer></script>
+  
+  <script>
+    // Check if username exists in localStorage and update the login button
+    document.addEventListener('DOMContentLoaded', function () {
+      const loginButton = document.getElementById('loginButton');
+      const userId = localStorage.getItem('user_id');
+
+      if (userId) {
+        // Fetch recommendations for the logged-in user
+        fetchRecommendations();
+
+        // Optionally, update the login button to show "My Profile" instead of "Log In"
+        loginButton.textContent = "My Profile";
+        loginButton.href = "profile.html";
+      }
+    });
+  </script>
+</body>
+</html>

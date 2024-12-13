@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile | SkillSwap</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #121212;
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      margin: 0;
+      padding-top: 60px; /* Space for navbar */
+    }
+
+    /* Navbar styling */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: rgba(0, 0, 0, 0.7);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      color: #00d4ff;
+    }
+
+    .profile-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* Header and Avatar */
+    .profile-header {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    .profile-header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #00d4ff;
+      margin-bottom: 15px;
+    }
+
+    .profile-header h1 {
+      font-size: 2rem;
+      margin: 0;
+      color: #00d4ff;
+    }
+
+    .profile-header p {
+      color: #b0b0b0;
+      margin-top: 5px;
+    }
+
+    /* About Section */
+    .about-section, .skills-section, .experience-section {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      color: #00d4ff;
+      margin-bottom: 10px;
+    }
+
+    .section-content {
+      font-size: 1rem;
+      color: #d4d4d4;
+    }
+
+    /* Skills Tags */
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill-tag {
+      background-color: #00d4ff;
+      color: #ffffff;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Button to return to homepage */
+    .back-home-button {
+      background-color: #0097cc;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 20px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      margin-top: 20px;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+
+    .back-home-button:hover {
+      background-color: #0079a6;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div>
+      <a href="index.html">Home</a>
+      <a href="find_skills.html">Find Skills</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <a href="login.html" class="login-button">Log Out</a>
+  </div>
+
+  <!-- Profile Content -->
+  <div class="profile-container">
+    <!-- Profile Header -->
+    <div class="profile-header">
+      <img src="profile_avatar.jpg" alt="User Avatar">
+      <h1>John Doe</h1>
+      <p>Software Developer | AI Enthusiast</p>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-section">
+      <h2 class="section-title">About</h2>
+      <p class="section-content">Experienced software developer specializing in AI and machine learning. Passionate about building solutions that drive innovation and efficiency.</p>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="skills-section">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-list">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">Machine Learning</span>
+        <span class="skill-tag">Data Analysis</span>
+        <span class="skill-tag">React</span>
+      </div>
+    </div>
+
+    <!-- Experience Section -->
+    <div class="experience-section">
+      <h2 class="section-title">Experience</h2>
+      <p class="section-content">Software Engineer at TechCorp - 3 Years</p>
+      <p class="section-content">AI Developer at AI Innovate - 2 Years</p>
+    </div>
+
+    <!-- Button to Return to Homepage -->
+    <a href="index.html" class="back-home-button">← Back to Home</a>
+  </div>
+</body>
+</html>
